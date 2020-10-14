@@ -71,10 +71,10 @@ function fixStepIndicator(n) {
 
 
 
-function openLegal() {
-  document.getElementById("myLegal").style.width = "100%";
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
 }
 
-function closeLegal() {
-  document.getElementById("myLegal").style.width = "0%";
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
 }
