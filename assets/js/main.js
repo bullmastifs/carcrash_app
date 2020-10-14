@@ -5,9 +5,14 @@ function showTab(n) {
   var x = document.getElementsByClassName("tab");
   x[n].style.display = "block";
   if (n == 0) {
-    document.getElementById("loginBtn").style.display = "block";
+    document.getElementById("prevBtn").style.display = "none";
   } else {
-    document.getElementById("loginBtn").style.display = "block";
+    document.getElementById("prevBtn").style.display = "block";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("loginBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("loginBtn").innerHTML = "Login";
   }
   fixStepIndicator(n)
 }
@@ -61,4 +66,15 @@ function fixStepIndicator(n) {
   }
   //... and adds the "active" class on the current step:
   x[n].className += " active";
+}
+
+
+
+
+function openLegal() {
+  document.getElementById("myLegal").style.width = "100%";
+}
+
+function closeLegal() {
+  document.getElementById("myLegal").style.width = "0%";
 }

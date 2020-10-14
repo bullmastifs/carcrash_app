@@ -24,21 +24,103 @@
 </head>
 <body>
 	<main class="main">
-		<!-- Step 1 - Welcome screen with animation -->
+
+
+		<!-- Welcome screen -->
+		
+
 		<div class="welcome__container">
-			<div class="tab">
-			<div class="logo__center fade-in"><img src="assets/img/svg/logo.svg" alt="" height="90"></div>
-			<div id="loginBtn" class="main__button--white button__large fade-in delay-250">Login</div>
-			<div class="links__container--column">
-				<span class="link fade-in delay-300">Continue without Login</span>
-				<span class="link fade-in delay-500">Register</span>
+			<div class="flex-column">
+				<div class="logo__center fade-in">
+					<img src="assets/img/svg/logo.svg" alt="" height="90">
+				</div>
+				<div id="loginBtn" class="main__button--white button__large fade-in delay-250">
+					Login
+				</div>
+				<div class="links__container--column">
+					<span class="link fade-in delay-300" onclick="window.open('dashboard.html')">
+						Continue without Login
+					</span>
+					<span class="link fade-in delay-500">
+						Register
+					</span>
+				</div>
 			</div>
-			</div>
-			<!-- Circles which indicates the steps of the form: -->
-			<div class="indicator">
-				<span class="step"></span>
-				<span class="step"></span>
-			</div>
+
+
+
+
+
+
+			<form action="post" id="regForm" autocomplete="off" style="display: none">
+				<!-- Tab 2 -->
+				<div id="tab2" class="tab">
+					<div class="flex-column">
+						<div id="prevBtn" onclick="nextPrev(-1)">
+							<img src="assets/img/svg/arrow-left.svg" alt="" height="30">
+						</div>
+						<div class="logo__center fade">
+							<img src="assets/img/svg/logo.svg" alt="" height="90">
+						</div>
+						<input class="inputs__welcome" type="tel" placeholder="55555555" maxlength="8" autocomplete="off" onkeypress='validate(event)' title="You must contain at least 8 digit number characters!" required>
+						<script>
+							function validate(evt) {
+								var theEvent = evt || window.event;
+								var key = theEvent.keyCode || theEvent.which;
+								key = String.fromCharCode( key );
+								var regex = /[0-9]|\./;
+								if( !regex.test(key) ) {
+									theEvent.returnValue = false;
+									if(theEvent.preventDefault) theEvent.preventDefault();
+								}
+							}
+						</script>
+						<input class="inputs__welcome" type="password" placeholder="Password">
+						<div id="loginBtn" class="main__button--white button__large fade-in delay-250" onclick="nextPrev(1)">
+							Login
+						</div>
+						<div class="links__container--column">
+							<span class="link delay-300">
+								Continue with Face Id
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- Tab 3 -->
+				<div id="tab3" class="tab">
+					<div class="register__container">
+						<div class="flex-column">
+							<span class="welcome__title">Register</span>
+							<input type="name" placeholder="E.g. Jānis" autocomplete="off" required>
+							<input type="email" placeholder="E-mail Address" autocomplete="off" required>
+							<input type="tel" placeholder="Phone Number" autocomplete="off" required>
+							<div id="createAccountBtn" class="main__button--white button__large">Create</div>
+						</div>
+						<div class="links__container--column">
+							<span class="link delay-300" onclick="openLegal();">
+								Legal
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- Circles which indicates the steps of the form: -->
+				<div class="indicator">
+					<span class="step"></span>
+					<span class="step"></span>
+					<span class="step"></span>
+				</div>
+
+				<!-- Register container -->
+				<div id="myLegal" class="overlay">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					<div class="overlay-content">
+						<span>
+							<h4>Some title</h4>
+							<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur?</p>
+						</span>
+					</div>
+				</div>
+			</form>
 		</div>
 	</main>
 </body>
