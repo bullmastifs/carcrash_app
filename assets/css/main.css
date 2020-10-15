@@ -27,6 +27,9 @@
 		outline: 0;
 	}
 
+	p {
+		color:#a4a4a4;
+	}
 	code,
 	kbd,
 	pre,
@@ -80,6 +83,21 @@
 		to {-moz-opacity: 100%;-moz-transform: translateY(0px);}
 	}
 
+	@keyframes fadeside {
+		from {opacity: 0%;}
+		to {opacity: 100%;}
+	}
+
+	@-webkit-keyframes fadeside {
+		from {-webkit-opacity: 0%;}
+		to {-webkit-opacity: 100%;}
+	}
+
+	@-moz-keyframes fadeside {
+		from {-moz-opacity: 0%;}
+		to {-moz-opacity: 100%;}
+	}
+
 	@-webkit-keyframes bounce {
 		0%, 25%, 50%, 75%, 100% {
 			-webkit-transform: translateY(0);
@@ -115,6 +133,20 @@
 		-webkit-animation: bounce 2s infinite;
 		animation: bounce 2s infinite;
 		cursor: pointer;
+	}
+
+	.fade-side {
+		-moz-animation-name: fadeside;
+		display: inline-block;
+		-moz-animation-duration: 1000ms;
+		-webkit-animation-name: fadeside;
+		-webkit-animation-duration: 1000ms;
+		animation-name: fadeside;
+		animation-duration: 1000ms;
+		animation-delay: 0s;
+		animation-iteration-count: 1;
+		transition-timing-function: ease-out;
+		transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 1s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 	}
 
 	.fade-in {
@@ -169,8 +201,8 @@
 		position: relative;
 		height: 100%;
 		width: 100%;
-		padding-left: 1.625em; /* 26/16 */
-		padding-right: 1.625em; /* 26/16 */
+		padding-left: 2em; /* 26/16 */
+		padding-right: 2em; /* 26/16 */
 		text-align: center;
 		align-items: center;
 		justify-content: center;
@@ -194,8 +226,6 @@
 	}
 
 	.main__button--white {
-		margin-top: 3.75em; /* 60/16 */
-		margin-bottom: 1.75em; /* 60/16 */
 		font-family: 'Karla', sans-serif;
 		font-weight: 700;
 		max-width: 15.625em; /* 250/16 */
@@ -205,6 +235,29 @@
 		text-transform: uppercase;
 		box-shadow: 0px 4px 15px #76A3F4;
 		transition: 300ms;
+	}
+
+	.main__button--border {
+		font-family: 'Karla', sans-serif;
+		font-weight: 700;
+		max-width: 15.625em; /* 250/16 */
+		color: #fff;
+		border: 1px solid #fff; 
+		/*background-color: #3265f2;*/
+		border-radius: 0.375em; /* 6/16 */
+		text-transform: uppercase;
+		/*box-shadow: 0px 4px 15px #76A3F4;*/
+		transition: 300ms;
+	}
+
+	.single__space {
+		margin-top: 3.75em; /* 60/16 */
+		margin-bottom: 1.75em; /* 60/16 */
+	}
+
+	.multi__space {
+		margin-top: 3.75em; /* 60/16 */
+		margin-bottom: 1em;
 	}
 
 	.main__button--white:hover {
@@ -241,10 +294,13 @@
 	}
 
 	.link {
-		padding-top: 50px;
 		padding: 0.625em; /* 10/16 */
 		font-size: 0.875em; /* 14/16 */
 		letter-spacing: .02em;
+	}
+
+	span.link {
+		padding-bottom: 20px;
 	}
 
 	#regForm {
@@ -285,9 +341,14 @@
 
 	#prevBtn {
 		cursor: pointer;
+	}
+
+	#prevBtn2 {
+		display: block;
+		cursor: pointer;
 		position: fixed;
-		top: 20px;
-		left: 15px;
+		left: 10px;
+		top:20px;
 	}
 
 	.inputs__welcome {
@@ -296,23 +357,37 @@
 		-moz-appearance: none;
 		display: block;
 		background-color: #98B6F6;
+		border: 1px solid #98B6F6;
 		color: #fff;
-		border: none;
+		/*border: none;*/
 		border-radius: 0.3125em; /* 5/16 */
 		min-width: 17.5em;  /* 280/16 */
 		padding: 0.625em; /* 10/16 */
 		font-family: 'Karla', sans-serif;
 		font-size: 1em;
 		margin-top: 0.5625em; /* 9/16 */
-		padding: 1.55em; /* 20/16 */
-		width: 90%;
+		padding: 0.95em; /* 20/16 */
+		width: 100%;
 		outline: none;
 	}
 
+	.inputs__welcome.invalid {
+		border: 1px solid red;
+	}
+
+	.inputs__welcome.invalid::placeholder {
+		color: red;opacity: 1;
+	}
+
 	.welcome__title {
+		display: block;
 		font-size: 1.5em; /* 24/16 */
 		padding: 1.5em 0; /* 24/16 */
 		text-align: left;
+		color: #fff;
+		font-weight: 900;
+		font-family: 'Karla', sans-serif;
+		letter-spacing: -0.03rem;
 	}
 
 	.register__container {
@@ -373,4 +448,43 @@
 		top: 15px;
 		right: 14px;
 		font-size: 60px;
+	}
+
+	.modal {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		padding-top: 100px; /* Location of the box */
+		left: 0;
+		top: 0;
+		padding: 2em;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: #fff; /* Fallback color */
+		text-align: left;
+	}
+
+	/* Modal Content */
+	.modal-content {
+		background-color: #fefefe;
+		margin: auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 80%;
+	}
+
+	/* The Close Button */
+	.closes {
+		color: #000;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
 	}
