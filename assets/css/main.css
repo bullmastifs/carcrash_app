@@ -22,7 +22,11 @@
 
 	p {
 		color:#a4a4a4;
+		font-size: 1em;
+		letter-spacing: -0.02em;
+		line-height: 1.45em;
 	}
+
 	code,
 	kbd,
 	pre,
@@ -90,6 +94,7 @@
 		from {-moz-opacity: 0%;-moz-transform: translateX(200px);}
 		to {-moz-opacity: 100%;-moz-transform: translateX(0px);}
 	}
+
 	@keyframes fadeside {
 		from {opacity: 0%;}
 		to {opacity: 100%;}
@@ -141,6 +146,7 @@
 		animation: bounce 2s infinite;
 		cursor: pointer;
 	}
+
 	.fade-push {
 		-moz-animation-name: push;
 		display: inline-block;
@@ -153,8 +159,8 @@
 		animation-iteration-count: 1;
 		transition-timing-function: ease-in-out;
 		transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 1s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
-
 	}
+
 	.fade-side {
 		-moz-animation-name: fadeside;
 		display: inline-block;
@@ -184,12 +190,15 @@
 		transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 1s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 	}
 	.delay-50,
+	.delay-100,
 	.delay-150,
 	.delay-250,
 	.delay-300,
 	.delay-350,
 	.delay-450,
-	.delay-500 {
+	.delay-500,
+	.delay-550,
+	.delay-650 {
 		-webkit-animation-name: fadein;
 		-webkit-animation-duration: 500ms;
 		-moz-animation-name: fadein;
@@ -202,12 +211,15 @@
 		transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 1s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 	}
 	.delay-50 {animation-delay: 50ms;}
+	.delay-100 {animation-delay: 100ms;}
 	.delay-150 {animation-delay: 150ms;}
 	.delay-250 {animation-delay: 250ms;}
 	.delay-300 {animation-delay: 300ms;}
 	.delay-350 {animation-delay: 350ms;}
 	.delay-450 {animation-delay: 450ms;}
 	.delay-500 {animation-delay: 500ms;}
+	.delay-550 {animation-delay: 550ms;}
+	.delay-650 {animation-delay: 650ms;}
 
 	.main {
 		display: block;
@@ -257,6 +269,21 @@
 		transition: 300ms;
 	}
 
+	.main__button--blue {
+		font-family: 'Karla', sans-serif;
+		font-weight: 700;
+		max-width: 15.625em; /* 250/16 */
+		color: #fff;
+		background-color: #3265f2;
+		border-radius: 0.375em; /* 6/16 */
+		text-transform: uppercase;
+		box-shadow: 0px 4px 15px #76A3F4;
+		transition: 300ms;
+		text-align: center;
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+
 	.main__button--border {
 		font-family: 'Karla', sans-serif;
 		font-weight: 700;
@@ -280,7 +307,8 @@
 		margin-bottom: 1em;
 	}
 
-	.main__button--white:hover {
+	.main__button--white:hover,
+	.main__button--blue:hover {
 		box-shadow: 0px 6px 25px #76A3F4;
 		transform: 300ms;
 		opacity: .8;
@@ -330,14 +358,14 @@
 	/* Indicator */
 	.indicator {
 		position: fixed;
-		bottom: 1.25em; /* 20/16 */
+		bottom: 1.25em;
 		text-align: center;
-		left: 44%;
-		right: 44%;
+		width: 100%;
+		left: 0%;
+		/*right: 2%;*/
 		/*margin-top: 2.5em; /* 40/16 */
 	}
 
-	/* Make circles that indicate the steps of the form: */
 	.step {
 		height: 4px;
 		width: 5px;
@@ -354,11 +382,19 @@
 		width: 1em;
 	}
 
-	/* Hide all steps by default: */
 	.tab {
 		display: none;
 	}
-
+	
+	span.section__title.pointer {
+    display: flex;
+    align-items: center;
+	}
+	button {
+		appearance:none;
+		border:none;
+		width: none;
+	}
 	#prevBtn {
 		cursor: pointer;
 	}
