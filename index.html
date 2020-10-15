@@ -18,7 +18,7 @@
 	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
 	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
 	<script src="assets/js/main.js" defer></script>
-	<script src="assets/js/drop.js" defer></script>
+	<!-- <script src="assets/js/drop.js" defer></script> -->
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<meta name="theme-color" content="#3265F2">
 </head>
@@ -51,7 +51,7 @@
 
 
 				<!-- Tab 2 -->
-				<div class="tab fade-side">
+				<div id="tab2" class="tab fade-side">
 					<div class="flex-column">
 						<div id="prevBtn2" onclick="nextPrev(-1)">
 							<img src="assets/img/svg/arrow-left.svg" alt="" height="40">
@@ -72,8 +72,8 @@
 								}
 							}
 						</script>
-						<input class="inputs__welcome" type="password" placeholder="Password">
-						<div id="nextBtn" class="multi__space main__button--white button__large fade-in delay-250" onclick="nextPrev(1)">
+						<input class="inputs__welcome" type="text" placeholder="4-digit code" maxlength="4">
+						<div id="nextBtn" class="multi__space main__button--white button__large fade-in delay-250" onclick="toDash()">
 							Log in
 						</div>
 						<div id="prevBtn" class="main__button--border button__large fade-in delay-250" onclick="nextPrev(-1)">
@@ -107,7 +107,12 @@
 								}
 							}
 						</script>
-							<div id="createAccountBtn" class="single__space main__button--white button__large" onclick="validateForm()">Create</div>
+							<div id="createAccountBtn" class="multi__space main__button--white button__large" onclick="validateForm2()">
+								Create
+							</div>
+							<div id="prevBtn" class="main__button--border button__large" onclick="nextPrev(-2)">
+							Cancel
+						</div>
 						</div>
 						<div class="links__container--column">
 							<span class="link delay-300" id="myLegalBtn">
@@ -125,14 +130,13 @@
 				</div>
 
 				<!-- Register container -->
-				<div id="myModal" class="modal">
+				<div id="myModal" class="modal fade-side">
 					<a href="javascript:void(0)" class="closes" onclick="closeNav()"><img src="assets/img/svg/close.svg" alt=""></a>
 
-
-							<h4>Some title</h4>
+							<h3 class="padding__top--30">Some title</h3>
 							<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur?</p>
 							<br>
-							<h4>Some other title</h4>
+							<h3>Some other title</h3>
 							<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur? Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur?</p>
 
 							<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur?</p>

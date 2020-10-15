@@ -488,3 +488,17 @@
 		text-decoration: none;
 		cursor: pointer;
 	}
+
+		.padding__top--30 {
+		padding-top: 1.875em /* 30/16 */;
+	}
+
+	.thankyou__text {
+		color: #fff;
+	}
+
+	span a {
+		color: #fff;
+		text-decoration: underline;
+		font-size: 1em;
+	}
