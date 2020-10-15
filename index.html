@@ -29,7 +29,7 @@
 		<!-- Welcome screen -->
 
 		<div class="welcome__container">
-			<form action="post" id="regForm" autocomplete="off">
+			<form action="post" id="regForm" method="post" autocomplete="off"> <!--action="post.php"-->
 				<div class="tab">
 					<div class="flex-column">
 						<div class="logo__center">
@@ -63,7 +63,7 @@
 						<input class="inputs__welcome" type="tel" placeholder="Phone number" maxlength="8" autocomplete="off" onkeypress='validate(event)' title="You must contain at least 8 digit number characters!" required>
 						<!-- Code input for validation / on this or next level -->
 						<input class="inputs__welcome" type="text" title="You must contain 4 digit number sends by SMS!" placeholder="4-digit code" maxlength="4">
-						<div id="nextBtn" class="multi__space main__button--white button__large fade-in delay-250" onclick="toDash()">
+						<div id="nextBtn2" class="multi__space main__button--white button__large fade-in delay-250" onclick="toDash()">
 							Next
 						</div>
 						<div id="prevBtn" class="main__button--border button__large fade-in delay-250" onclick="nextPrev(-1)">
@@ -93,8 +93,8 @@
 				<div class="tab fade-side">
 					<span class="welcome__title">Register</span>
 					<div class="flex-column">
-						<form action="post">
-							<input class="inputs__welcome" type="name" placeholder="E.g. Mariuss" autocomplete="off" required>
+						<!-- <form action="" method="post"> -->
+							<input class="inputs__welcome" type="text" placeholder="E.g. Mariuss" autocomplete="off" required>
 							<input class="inputs__welcome" type="email" placeholder="E-mail Address" autocomplete="off" required>
 							<input class="inputs__welcome" type="tel" placeholder="Phone number" maxlength="8" autocomplete="off" onkeypress='validate(event)' title="You must contain at least 8 digit number characters!" required>
 							<script>
@@ -112,10 +112,10 @@
 							<div id="createAccountBtn" class="multi__space main__button--white button__large" onclick="validateForm2()">
 								Create
 							</div>
-							<div id="prevBtn" class="main__button--border button__large" onclick="nextPrev(-2)">
+							<div id="prevBtn3" class="main__button--border button__large" onclick="nextPrev(-2)">
 								Cancel
 							</div>
-						</form>
+						<!-- </form> -->
 					</div>
 					<div class="links__container--column">
 						<span class="link delay-300" id="myLegalBtn">
