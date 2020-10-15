@@ -20,16 +20,17 @@
 	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/dash.js"></script>
 	<meta name="theme-color" content="#3265F2">
 </head>
 <body>
-	<main class="main">
+	<main class="main fade-side">
 		<div class="main__desk"></div>
 
 		<!-- Menu -->
 		<div id="myNav" class="overlay">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="assets/img/svg/close.svg" alt=""></a>
-			<div class="overlay-content">
+			<div class="overlay-content pre__text__grad">
 				<a href="#">My Profile</a>
 				<span class="menu__line"></span>
 				<a href="#">App Settings</a>
@@ -42,7 +43,7 @@
 					<a href="#">My Reports</a>
 					<span class="notify__number"><span>8</span></span>
 				</div>
-					<span class="menu__line"></span>
+				<span class="menu__line"></span>
 				<span class="icon__exit" onclick="window.open('index.html' , '_self')"><img src="assets/img/svg/exit.svg" alt=""><span class="pre__text__grad">Log out</span></span>
 			</div>
 		</div>
@@ -60,23 +61,55 @@
 					<span class="image__icon" onclick="openNav()"><img src="assets/img/svg/menu.svg" alt=""></span>
 				</div>
 			</div>
-			<div class="statuss__line text__gray">No active statuses</div>
+			<div class="create__status">
+				<div class="section__main">
+					<div class="section__ch fade-in delay-50" onclick="window.open('report.html' , '_self')">
+						<div class="content__row">
+							<img src="assets/img/svg/check.svg" alt="benefit icon">
+							<div class="content__col">
+								<span class="pre__text__grad">Report # 900827</span>
+								<span class="pre__text__grad__gray truncate">Insurance Nr. 900872 is accepted and also sends to a service repairmens.</span>
+							</div>
+						</div>
+						<div><img src="assets/img/svg/arrow-collapse-right.svg" alt=""></div>
+					</div>
+
+					<!-- Status report -->
+
+					<div class="section__ch fade-in delay-50" onclick="window.open('replacement.html' , '_self')">
+						<div class="content__row">
+							<img src="assets/img/svg/check.svg" alt="benefit icon">
+							<div class="content__col">
+								<span class="pre__text__grad">Car replacement</span>
+								<span class="pre__text__grad__gray truncate">Dear, John! We are hire you about car replacement. We don't have a changable car right now. But there is an option to choose of one of our rent car.</span>
+							</div>
+						</div>
+						<div><img src="assets/img/svg/arrow-collapse-right.svg" alt=""></div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- <div class="statuss__line text__gray">No active statuses</div> -->
+
 
 			<div class="create__report">
 				<span class="section__title" style="margin-top: 1em;">Create report</span>
-				<!-- This is Section1 for categories -->
+
+				<!-- Create report 1 -->
+
 				<div class="sections">
 					<div class="section__ch fade-in delay-50" onclick="alert('Function coming soon!')">
 						<div class="content__row">
 							<div class="gradient__container sh__icon">
-								<img src="assets/img/svg/benefit-ico-1.svg" alt="">
+								<img src="assets/img/svg/benefit-ico-1.svg" alt="benefit icon">
 							</div>
 							<span class="pre__text__grad">Car crash</span>
 						</div>
 						<div><img src="assets/img/svg/arrow-collapse-right.svg" alt=""></div>
 					</div>
-					<!-- End of section -->
-					<!-- This is Section2 for categories -->
+
+					<!-- Create report 2 -->
+
 					<div class="section__ch fade-in delay-150" onclick="alert('Function coming soon!')">
 						<div class="content__row">
 							<div class="gradient__container sh__icon">
@@ -86,8 +119,9 @@
 						</div>
 						<div><img src="assets/img/svg/arrow-collapse-right.svg" alt=""></div>
 					</div>
-					<!-- End of section -->
-					<!-- This is Section3 for categories -->
+
+					<!-- Create report 3 -->
+
 					<div class="section__ch fade-in delay-250" onclick="alert('Function coming soon!')">
 						<div class="content__row">
 							<div class="gradient__container sh__icon">
@@ -97,15 +131,46 @@
 						</div>
 						<div><img src="assets/img/svg/arrow-collapse-right.svg" alt=""></div>
 					</div>
-					<!-- End of section -->
 				</div>
 			</div>
 
-			<div class="create__report">
-				<span class="section__title">Reports</span>
-				<div class="statuss__line text__gray">You have no active reports</div>
-			</div>
 
+
+			<!-- Third section // Reports -->
+
+			<div class="create__report">
+				<span class="section__title">Reports under review</span>
+			</div>
+			<div class="create__status">
+				<div class="report__cont">
+
+					<!-- Reports 1 -->
+
+					<div class="section__ch fade-in delay-50" onclick="">
+						<div class="content__row">
+							<img src="assets/img/svg/alert.svg" alt="benefit icon">
+							<div class="content__col">
+								<span class="pre__text__grad">Car selection</span>
+								<span class="pre__text__grad__gray truncate">Hello, John. Your car Subaru Impreza is in our lorem ipsum dolor sit amet.</span>
+							</div>
+						</div>
+						<div><img src="assets/img/svg/arrow-collapse-right.svg" alt=""></div>
+					</div>
+
+					<!-- Reports 2 -->
+
+					<div class="section__ch fade-in delay-50" onclick="">
+						<div class="content__row">
+							<img src="assets/img/svg/alert.svg" alt="benefit icon">
+							<div class="content__col">
+								<span class="pre__text__grad">Car replacement</span>
+								<span class="pre__text__grad__gray truncate">Dear, John! We are hire you about accident. You are lorem ipsum dolor sit amet.</span>
+							</div>
+						</div>
+						<div><img src="assets/img/svg/arrow-collapse-right.svg" alt=""></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
 </body>
