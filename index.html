@@ -39,7 +39,7 @@
 							Login
 						</div>
 						<div class="links__container--column">
-							<span class="link fade-in delay-300" onclick="window.open('dashboard.html')">
+							<span class="link fade-in delay-300" onclick="window.open('dashboard.html' , '_self')">
 								Continue without Login
 							</span>
 							<span class="link fade-in delay-500" onclick="nextPrev(2)">
@@ -59,66 +59,69 @@
 						<div class="logo__center fade">
 							<img src="assets/img/svg/logo.svg" alt="" height="90">
 						</div>
+						<!-- Phone input for validation -->
 						<input class="inputs__welcome" type="tel" placeholder="Phone number" maxlength="8" autocomplete="off" onkeypress='validate(event)' title="You must contain at least 8 digit number characters!" required>
-						<script>
-							function validate(evt) {
-								var theEvent = evt || window.event;
-								var key = theEvent.keyCode || theEvent.which;
-								key = String.fromCharCode( key );
-								var regex = /[0-9]|\./;
-								if( !regex.test(key) ) {
-									theEvent.returnValue = false;
-									if(theEvent.preventDefault) theEvent.preventDefault();
-								}
-							}
-						</script>
-						<input class="inputs__welcome" type="text" placeholder="4-digit code" maxlength="4">
+						<!-- Code input for validation / on this or next level -->
+						<input class="inputs__welcome" type="text" title="You must contain 4 digit number sends by SMS!" placeholder="4-digit code" maxlength="4">
 						<div id="nextBtn" class="multi__space main__button--white button__large fade-in delay-250" onclick="toDash()">
-							Log in
+							Next
 						</div>
 						<div id="prevBtn" class="main__button--border button__large fade-in delay-250" onclick="nextPrev(-1)">
 							Step back
 						</div>
-						<div class="links__container--column">
+						<div class="links__container--column" onclick="window.open('dashboard.html' , '_self')">
 							<span class="link delay-300">
 								Continue with Face Id
 							</span>
 						</div>
 					</div>
 				</div>
+				<script>
+					function validate(evt) {
+						var theEvent = evt || window.event;
+						var key = theEvent.keyCode || theEvent.which;
+						key = String.fromCharCode( key );
+						var regex = /[0-9]|\./;
+						if( !regex.test(key) ) {
+							theEvent.returnValue = false;
+							if(theEvent.preventDefault) theEvent.preventDefault();
+						}
+					}
+				</script>
 
 				<!-- Tab 3 -->
-
 				<div class="tab fade-side">
-						<span class="welcome__title">Register</span>
-						<div class="flex-column">
+					<span class="welcome__title">Register</span>
+					<div class="flex-column">
+						<form action="post">
 							<input class="inputs__welcome" type="name" placeholder="E.g. Mariuss" autocomplete="off" required>
 							<input class="inputs__welcome" type="email" placeholder="E-mail Address" autocomplete="off" required>
 							<input class="inputs__welcome" type="tel" placeholder="Phone number" maxlength="8" autocomplete="off" onkeypress='validate(event)' title="You must contain at least 8 digit number characters!" required>
-						<script>
-							function validate(evt) {
-								var theEvent = evt || window.event;
-								var key = theEvent.keyCode || theEvent.which;
-								key = String.fromCharCode( key );
-								var regex = /[0-9]|\./;
-								if( !regex.test(key) ) {
-									theEvent.returnValue = false;
-									if(theEvent.preventDefault) theEvent.preventDefault();
+							<script>
+								function validate(evt) {
+									var theEvent = evt || window.event;
+									var key = theEvent.keyCode || theEvent.which;
+									key = String.fromCharCode( key );
+									var regex = /[0-9]|\./;
+									if( !regex.test(key) ) {
+										theEvent.returnValue = false;
+										if(theEvent.preventDefault) theEvent.preventDefault();
+									}
 								}
-							}
-						</script>
+							</script>
 							<div id="createAccountBtn" class="multi__space main__button--white button__large" onclick="validateForm2()">
 								Create
 							</div>
 							<div id="prevBtn" class="main__button--border button__large" onclick="nextPrev(-2)">
-							Cancel
-						</div>
-						</div>
-						<div class="links__container--column">
-							<span class="link delay-300" id="myLegalBtn">
-								Legal
-							</span>
-						</div>
+								Cancel
+							</div>
+						</form>
+					</div>
+					<div class="links__container--column">
+						<span class="link delay-300" id="myLegalBtn">
+							Legal
+						</span>
+					</div>
 
 				</div>
 
@@ -133,15 +136,17 @@
 				<div id="myModal" class="modal fade-side">
 					<a href="javascript:void(0)" class="closes" onclick="closeNav()"><img src="assets/img/svg/close.svg" alt=""></a>
 
-							<h3 class="padding__top--30">Some title</h3>
-							<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur?</p>
-							<br>
-							<h3>Some other title</h3>
-							<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur? Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur?</p>
+					<h3 class="padding__top--30">Some title</h3>
+					<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur?</p>
+					<br>
+					<h3>Some other title</h3>
+					<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur? Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur?</p>
 
-							<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur?</p>
+					<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur?</p>
 
+					<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur? Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Dolorum provident magni cupiditate pariatur libero reiciendis totam veritatis, suscipit consequatur nam amet. Eaque, nemo! Sit ipsa eum quia reiciendis tenetur quo. Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Alias ea quos dolorem, cum sit tempora commodi fuga facere omnis delectus earum eligendi. Reprehenderit quas, nihil ipsum quae, cum laudantium aspernatur?</p>
 
+					<a href="" style="text-decoration: underline;">Some links and data about company!</a>
 				</div>
 			</form>
 		</div>

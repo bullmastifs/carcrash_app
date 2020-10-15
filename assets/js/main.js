@@ -10,7 +10,7 @@ function showTab(n) {
     document.getElementById("prevBtn").style.display = "block";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+    document.getElementById("nextBtn").innerHTML = "Next";
   } else {
     document.getElementById("nextBtn").innerHTML = "Login";
   }
@@ -59,45 +59,33 @@ function validateForm() {
 }
 
 function toDash() {
-  // This function deals with validation of the form fields
   var x, y, i, valid = true;
   x = document.getElementsByClassName("flex-column");
   y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
-    // If a field is empty...
     if (y[i].value == "") {
-      // add an "invalid" class to the field:
       y[i].className += " invalid";
-      // and set the current valid status to false
       valid = false;
     }
   }
-  // If the valid status is true, mark the step as finished and valid:
   if (valid) {
-    window.open('dashboard.html/#tab2');
+    window.open('dashboard.html', "_self");
   }
 }
 
 function validateForm2() {
-  // This function deals with validation of the form fields
   var x, y, i, valid = true;
   x = document.getElementsByClassName("flex-column");
   y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
-    // If a field is empty...
     if (y[i].value == "") {
-      // add an "invalid" class to the field:
       y[i].className += " invalid";
-      // and set the current valid status to false
       valid = false;
     }
   }
-  // If the valid status is true, mark the step as finished and valid:
   if (valid) {
     // window.open('index.html');
-    window.open('thankyou.html');
+    window.open('thankyou.html', "_self");
   }
 }
 

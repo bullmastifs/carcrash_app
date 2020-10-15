@@ -489,7 +489,7 @@
 		cursor: pointer;
 	}
 
-		.padding__top--30 {
+	.padding__top--30 {
 		padding-top: 1.875em /* 30/16 */;
 	}
 
@@ -501,4 +501,13 @@
 		color: #fff;
 		text-decoration: underline;
 		font-size: 1em;
+	}
+
+	@media screen and (min-width: 1000px) {
+		.inputs__welcome,
+		.welcome__title {
+			max-width: 320px;
+			margin-right: auto;
+			margin-left: auto;
+		}
 	}
