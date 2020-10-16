@@ -63,7 +63,7 @@
 						<h4>Basic information here:</h4>
 						
 						<form action="post" autocomplete="off">
-							<input class="inputs__report" type="date" placeholder="DD/MM/YYYY" required="">
+							<input class="inputs__report" type="date" placeholder="DD/MM/YYYY" id="today" name="depart" data-date-inline-picker="false" data-date-open-on-focus="true">
 							<select class="inputs__report" name="count" id="carCount" required="">
 								<option value="0" selected disabled>How many cars in accident?</option>
 								<option value="1">One</option>
@@ -110,20 +110,25 @@
 							<input class="inputs__report" type="text" placeholder="Car Brand*" required>
 							<input class="inputs__report" type="text" placeholder="Car Model*" required>
 							<textarea class="inputs__report" name="" id="" cols="30" rows="10" placeholder="About situation*"></textarea>
-							<button id="newName" type="submit" style="width: 100%!important;" class="main__button--blue button__large" onclick="openPictures();">Next step</button>
+							<div id="newName" type="submit" style="width: 100%!important;" class="main__button--blue button__large" onclick="openPictures();">Next step</div>
 							<script>
 								function openPictures() {
 									window.open('pictures.html','_self');
 								} 
-									console.log('error');
-								
+									console.log('Button starts!');
 							</script>
 							<!-- onclick="window.open('pictures.html','_self')" -->
 						</form>
+						<script>
+							document.querySelector("#today").valueAsDate = new Date();
+							console.log('Date generated!');
+						</script>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- Extra space for latest block -->
+			<div class="extra__space--5em"></div>
 	</main>
 </body>
 </html>

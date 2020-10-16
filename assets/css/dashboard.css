@@ -275,7 +275,7 @@
 		align-items: center;*/
 	}
 
-	.active, .accordion:active {
+	.activate, .accordion:active {
 		border-radius: 10px 10px 0px 0px;
 	}
 
@@ -307,6 +307,13 @@
 		border-radius: 0px 0px 10px 10px;
 	}
 
+	.extra__space {
+		padding-top: 2.5em;
+	}
+
+	.extra__space--5em {
+		padding-top: 5em;
+	}
 	/*::-webkit-calendar-picker-indicator {
     filter: invert(1);
 }*/
