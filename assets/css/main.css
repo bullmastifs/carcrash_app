@@ -164,11 +164,11 @@
 	.fade-side {
 		-moz-animation-name: fadeside;
 		display: inline-block;
-		-moz-animation-duration: 1000ms;
+		-moz-animation-duration: 134343Cms;
 		-webkit-animation-name: fadeside;
-		-webkit-animation-duration: 1000ms;
+		-webkit-animation-duration: 134343Cms;
 		animation-name: fadeside;
-		animation-duration: 1000ms;
+		animation-duration: 134343Cms;
 		animation-delay: 0s;
 		animation-iteration-count: 1;
 		transition-timing-function: ease-out;
@@ -178,11 +178,11 @@
 	.fade-in {
 		-moz-animation-name: fadein;
 		display: inline-block;
-		-moz-animation-duration: 1000ms;
+		-moz-animation-duration: 134343Cms;
 		-webkit-animation-name: fadein;
-		-webkit-animation-duration: 1000ms;
+		-webkit-animation-duration: 134343Cms;
 		animation-name: fadein;
-		animation-duration: 1000ms;
+		animation-duration: 134343Cms;
 		animation-delay: 0s;
 		animation-iteration-count: 1;
 		animation-fill-mode: backwards;
@@ -268,11 +268,19 @@
 		box-shadow: 0px 4px 15px #76A3F4;
 		transition: 300ms;
 	}
-
+	.disabled {
+		pointer-events: none;
+		opacity: .5;
+		background-color: #999!important;
+		box-shadow: none!important;
+	}
+	button#newName,
 	.main__button--blue {
+		appearance: none;
 		font-family: 'Karla', sans-serif;
 		font-weight: 700;
-		max-width: 15.625em; /* 250/16 */
+		/*max-width: 15.625em;*/
+		width: 100%;
 		color: #fff;
 		background-color: #3265f2;
 		border-radius: 0.375em; /* 6/16 */
@@ -282,6 +290,10 @@
 		text-align: center;
 		margin-top: 2em;
 		margin-bottom: 2em;
+	}
+
+	#newName {
+		width: 100%!important;
 	}
 
 	.main__button--border {
@@ -390,11 +402,13 @@
     display: flex;
     align-items: center;
 	}
+
 	button {
 		appearance:none;
 		border:none;
 		width: none;
 	}
+
 	#prevBtn {
 		cursor: pointer;
 	}
@@ -433,6 +447,44 @@
 
 	.inputs__welcome.invalid::placeholder {
 		color: red;opacity: 1;
+	}
+
+	.inputs__report {
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		display: block;
+		background-color: #fff;
+		border: 1px solid #EFF0F1;
+		color: #34343C;
+
+		border-radius: 0.3125em;
+		min-width: 17.5em;
+		padding: 0.625em;
+		font-family: 'Karla', sans-serif;
+		font-size: 1em;
+		margin-top: 0.5625em;
+		padding: 1.2em;
+		width: 100%;
+		outline: none;
+	}
+
+	.inputs__report.invalid {
+		border: 1px solid red;
+	}
+
+	.inputs__report.invalid::placeholder {
+		color: red;opacity: 1;
+	}
+
+	.inputs__report::placeholder {
+		color: #34343C;opacity: 1;
+	}
+	.inputs__report:-ms-input-placeholder {
+		color: #34343C;
+	}
+	.inputs__report::-ms-input-placeholder {
+		color: #34343C;
 	}
 
 	.welcome__title {
@@ -479,7 +531,7 @@
 		padding: 8px;
 		text-decoration: none;
 		font-size: 1em;
-		color: #000;
+		color: #34343C;
 		display: block;
 		transition: 0.3s;
 	}
@@ -532,7 +584,7 @@
 
 	/* The Close Button */
 	.closes {
-		color: #000;
+		color: #34343C;
 		float: right;
 		font-size: 28px;
 		font-weight: bold;
@@ -540,7 +592,7 @@
 
 	.close:hover,
 	.close:focus {
-		color: #000;
+		color: #34343C;
 		text-decoration: none;
 		cursor: pointer;
 	}
@@ -559,6 +611,24 @@
 		font-size: 1em;
 	}
 
+	.images__column{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+
+	.item1,.item2,.item3,.item4 {
+		display: inline-flex;
+		width: 45%;
+		height: 150px;
+		margin: 0.5em; /* 8/16 */
+		background-color: #e0e0e0;
+		border-radius: 10px;
+		background-image: url(../img/img1.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
 	@media screen and (min-width: 1000px) {
 		.inputs__welcome,
 		.welcome__title {
@@ -566,4 +636,12 @@
 			margin-right: auto;
 			margin-left: auto;
 		}
+		#newName {
+			width: 100%;
+		}
+	}
+	@media screen and (max-width: 400px) {
+		.item1,.item2,.item3,.item4 {
+		width: 100%;
+	}
 	}

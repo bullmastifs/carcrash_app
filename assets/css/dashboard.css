@@ -204,6 +204,7 @@
 		transition: 400ms;
 		box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
 	}
+
 	.section__ch__disable {
 		pointer-events: none;
 		box-sizing: border-box;
@@ -219,6 +220,7 @@
 		box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
 		opacity: 0.7;
 	}
+
 	.section__ch:hover {
 		background: #f4f4f4;
 		transition: 200ms;
@@ -278,22 +280,23 @@
 	}
 
 	.rotated {
-    transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-   -webkit-transform: rotate(90deg);
+		transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
 	}
 
 	.rotate__ico {
-    transform-origin: center;
-    transition-duration: 150ms;
-    transition-timing-function: ease-in-out;
-    -webkit-transform-origin: center;
-    -webkit-transition-duration: 150ms;
-    -webkit-transition-timing-function: ease-in-out;
-    -moz-transform-origin: center;
-    -moz-transition-duration: 150ms;
-    -moz-transition-timing-function: ease-in-out;
-}
+		transform-origin: center;
+		transition-duration: 150ms;
+		transition-timing-function: ease-in-out;
+		-webkit-transform-origin: center;
+		-webkit-transition-duration: 150ms;
+		-webkit-transition-timing-function: ease-in-out;
+		-moz-transform-origin: center;
+		-moz-transition-duration: 150ms;
+		-moz-transition-timing-function: ease-in-out;
+	}
+
 	.panel {
 		margin-bottom: 0.625em;
 		padding: 0 2em;
@@ -303,5 +306,9 @@
 		transition: max-height 0.2s ease-out;
 		border-radius: 0px 0px 10px 10px;
 	}
+
+	/*::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}*/
 
 /*}*/
