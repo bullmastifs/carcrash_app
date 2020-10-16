@@ -1,2 +1,2 @@
 # carcrash_app
-carcrash app checpoints
+Carcrash app with a few checkpoints. 
