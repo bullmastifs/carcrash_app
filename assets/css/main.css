@@ -148,7 +148,7 @@
 	}
 
 	.bounce {
-		page-break-inside-moz-animation: bounce 2s infinite;
+		/*page-break-inside-moz-animation: bounce 2s infinite;*/
 		-webkit-animation: bounce 2s infinite;
 		animation: bounce 2s infinite;
 		cursor: pointer;
@@ -331,7 +331,7 @@
 	.main__button--white:hover,
 	.main__button--blue:hover {
 		box-shadow: 0px 6px 25px #76A3F4;
-		transform: 300ms;
+		transition: 300ms;
 		opacity: .8;
 	}
 
@@ -551,7 +551,7 @@
 		margin-top: 13px;
 		height: 1px;
 		width: 100%;
-		color: #efefef;
+		/*color: #efefef;*/
 		background-color: #efefef;
 		margin-bottom: 13px;
 	}
