@@ -54,7 +54,7 @@
 
 
 			<div class="create__report">
-				<span class="section__title" style="margin-top: 1em;">Step 3. Private information</span>
+				<span class="section__title" style="margin-top: 1em;">Step 3 – Private information</span>
 				<div class="create__report">
 					<div class="sections">
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -66,7 +66,7 @@
 							<input class="inputs__report" type="text" placeholder="Name Surname" required="">
 							<input class="inputs__report" type="text" placeholder="Address" required="">
 							<select class="inputs__report" name="city" id="city" required>
-								<option value="0" selected disabled>City*</option>
+								<option value="city" selected disabled>City*</option>
 								<option value="1">Helsinki</option>
 								<option value="2">Paarnu</option>
 								<option value="3">Riga</option>
@@ -75,7 +75,7 @@
 								<option value="6">Oslo</option>
 							</select>
 							<select class="inputs__report" name="street" id="street" required>
-								<option value="0" selected disabled>Street*</option>
+								<option value="street" selected disabled>Street*</option>
 								<option value="1">St. Gelžinis st.</option>
 								<option value="2">Brīvības st.</option>
 								<option value="3">Suur-Amerika st.</option>
@@ -85,7 +85,7 @@
 								<option value="7">Tehnika st.</option>
 							</select>
 							<input class="inputs__report" type="text" maxlength="21" placeholder="IBAN*">
-							<div id="newName" type="submit" style="width: 100%!important;" class="main__button--blue button__large" onclick="openFinish();">Finish</div>
+							<div id="newName" style="width: 100%!important;" class="main__button--blue button__large" onclick="openFinish();">Finish</div>
 							<script>
 								function openFinish() {
 									window.open('finish.html','_self');

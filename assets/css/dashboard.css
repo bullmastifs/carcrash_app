@@ -314,8 +314,9 @@
 	.extra__space--5em {
 		padding-top: 5em;
 	}
+
 	/*::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-}*/
+  	  filter: invert(1);
+	}*/
 
 /*}*/

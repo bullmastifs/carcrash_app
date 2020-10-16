@@ -45,6 +45,13 @@
 		color: transparent;
 	}
 
+	select {
+		background-image: url("../img/svg/arrow-down.svg");
+		background-position: right;
+		background-repeat: no-repeat;
+		background-size: 2.2em;
+	}
+
 	body,
 	html {
 		height: 100%;
@@ -189,6 +196,7 @@
 		transition-timing-function: ease-out;
 		transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 1s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 	}
+
 	.delay-50,
 	.delay-100,
 	.delay-150,
@@ -210,6 +218,7 @@
 		transition-timing-function: ease-out;
 		transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 1s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 	}
+
 	.delay-50 {animation-delay: 50ms;}
 	.delay-100 {animation-delay: 100ms;}
 	.delay-150 {animation-delay: 150ms;}
@@ -406,9 +415,8 @@
 	}
 
 	button {
-		appearance:none;
-		border:none;
-		width: none;
+		appearance: none;
+		border: none;
 	}
 
 	#prevBtn {

@@ -22,7 +22,6 @@
 		<div class="main__desk"></div>
 
 		<!-- Welcome screen -->
-
 		<div class="welcome__container">
 			<form action="post" id="regForm" method="post" autocomplete="off"> <!--action="post.php"-->
 				<div class="tab">
@@ -30,15 +29,12 @@
 						<div class="logo__center">
 							<img src="assets/img/svg/logo.svg" alt="" height="90">
 						</div>
-						<div id="nextBtn" class="single__space main__button--white button__large fade-in delay-250" onclick="nextPrev(1)">
-							Login
+						<div id="nextBtn" class="single__space main__button--white button__large fade-in delay-250" onclick="nextPrev(1)">Login
 						</div>
 						<div class="links__container--column">
-							<span class="link fade-in delay-300" onclick="window.open('dashboard.html' , '_self')">
-								Continue without Login
+							<span class="link fade-in delay-300" onclick="window.open('dashboard.html' , '_self')">Continue without Login
 							</span>
-							<span class="link fade-in delay-500" onclick="nextPrev(2)">
-								Register
+							<span class="link fade-in delay-500" onclick="nextPrev(2)">Register
 							</span>
 						</div>
 					</div>
@@ -58,11 +54,9 @@
 						<input class="inputs__welcome" type="tel" placeholder="Phone number" maxlength="8" autocomplete="off" onkeypress='validate(event)' title="You must contain at least 8 digit number characters!" required>
 						<!-- Code input for validation / on this or next level -->
 						<input class="inputs__welcome" type="text" title="You must contain 4 digit number sends by SMS!" placeholder="4-digit code" maxlength="4">
-						<div id="nextBtn2" class="multi__space main__button--white button__large fade-in delay-250" onclick="toDash()">
-							Next
+						<div id="nextBtn2" class="multi__space main__button--white button__large fade-in delay-250" onclick="toDash()">Next
 						</div>
-						<div id="prevBtn" class="main__button--border button__large fade-in delay-250" onclick="nextPrev(-1)">
-							Step back
+						<div id="prevBtn" class="main__button--border button__large fade-in delay-250" onclick="nextPrev(-1)">Step back
 						</div>
 						<div class="links__container--column" onclick="window.open('dashboard.html' , '_self')">
 							<span class="link delay-300">
