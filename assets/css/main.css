@@ -302,10 +302,10 @@
 		max-width: 15.625em; /* 250/16 */
 		color: #fff;
 		border: 1px solid #fff; 
-		/*background-color: #3265f2;*/
+
 		border-radius: 0.375em; /* 6/16 */
 		text-transform: uppercase;
-		/*box-shadow: 0px 4px 15px #76A3F4;*/
+
 		transition: 300ms;
 	}
 
